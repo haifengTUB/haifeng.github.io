@@ -1,13 +1,13 @@
 # Site settings
 title: BY Blog
-SEOTitle: 柏荧的博客 | BY Blog
+SEOTitle: 海峰的博客 | Haifeng Blog
 header-img: img/post-bg-desk.jpg
-email: qiubaiying@gmail.com
+email: haifeng.xiao@campus.tu-berlin.de
 description: "Every failure is leading towards success."
-keyword: "BY, BY Blog, 柏荧的博客, qiubaiying, 邱柏荧, iOS, Apple, iPhone"
-url: "http://qiubaiying.github.io"          # your host, for absolute URL
+keyword: "BY, BY Blog, 海峰的博客, qiubaiying, 邱柏荧, iOS, Apple"
+url: "http://haifengTUB.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/qiubaiying/qiubaiying.github.io.git" # you code repository
+github_repo: "https://github.com/haifengTUB/haifengTUB.github.io.git" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
@@ -19,12 +19,12 @@ sidebar-avatar: /img/about-BY-gentle.jpg      # use absolute URL, seeing it's us
 # SNS settings
 RSS: false
 # weibo_username:     qiubaiying
-zhihu_username:     qiubaiying
-github_username:    qiubaiying
-facebook_username:  baiying.qiu.7
-jianshu_username:   e71990ada2fd
+zhihu_username:     肖海峰
+github_username:    haifengTUB
+# facebook_username:  baiying.qiu.7
+# jianshu_username:   e71990ada2fd
 #twitter_username:   qiubaiying
-
+wechat_username: Ponaodai1991
 
 
 
@@ -74,11 +74,11 @@ gitalk:
 
 # Analytics settings
 # Baidu Analytics
-ba_track_id: b50bf2b12b5338a1845e33832976fd68
+# ba_track_id: b50bf2b12b5338a1845e33832976fd68
 
 # Google Analytics
-ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
-ga_domain: qiubaiying.top               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
+# ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
+# ga_domain: qiubaiying.top               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
 
 
 
@@ -99,16 +99,16 @@ service-worker: true
 # Friends
 friends: [
     {
-        title: "WY",
-        href: "http://zhengwuyang.com"
+        title: "同济大学",
+        href: "https://www.tongji.edu.cn/"
     },{
-        title: "简书·BY",
-        href: "http://www.jianshu.com/u/e71990ada2fd"
+        title: "柏林工业大学",
+        href: "https://www.tu-berlin.de/"
     },{
-        title: "Apple",
-        href: "https://apple.com"
+        title: "DLR Planets",
+        href: "https://www.dlr.de/pf/"
     },{
-        title: "Apple Developer",
-        href: "https://developer.apple.com/"
+        title: "GFZ",
+        href: "https://www.gfzholdings.com/"
     }
 ]
