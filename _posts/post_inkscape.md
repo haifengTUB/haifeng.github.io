@@ -4,7 +4,7 @@ title:      使用开源的Inkscape来绘制矢量图
 subtitle:   取代商业的Viso
 date:       2020-04-13
 author:     Haifeng
-header-img: img/post-bg-BJJ.jpg
+header-img: img/sunflower.jpg
 catalog: true
 tags:
     - Inkscape Viso
