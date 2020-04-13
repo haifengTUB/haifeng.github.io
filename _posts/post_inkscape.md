@@ -63,6 +63,6 @@ Inkscape支持Mac, Linux和Windows平台，2020年的最新版本为0.92.5。对
 
 安装完成之后，在Inkscape的主菜单下的扩展中选择TexText或者WriteTex，然后输入LaTex表达式，点击确认：
 
-![Inkscape_code.JPG](https://i.loli.net/2020/04/13/48qtkxFZeUwhObz.jpg?imageView/2/w/300/q/45)
+![Inkscape_code.JPG](https://i.loli.net/2020/04/13/48qtkxFZeUwhObz.jpg?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1)
 
-![Inkscape_result.JPG](https://i.loli.net/2020/04/13/pS5L3HleB7IzuwK.jpg?imageView/2/w/300/q/45)
+![Inkscape_result.JPG](https://i.loli.net/2020/04/13/pS5L3HleB7IzuwK.jpg?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1)
