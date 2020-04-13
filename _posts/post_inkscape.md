@@ -47,7 +47,7 @@ Inkscape支持Mac, Linux和Windows平台，2020年的最新版本为0.92.5。对
 
 * **安装TexText和pdf2svg**：
 
-    * 将解压文件中的pdf2svg文件夹复制到C: Program Files文件夹，并添加到系统路径中（我的电脑右击，属性，高级系统设置，高级，环境变量，系统变量里边的Path）；
+    * 将解压文件中的pdf2svg文件夹复制到`C: Program Files`文件夹，并添加到系统路径中（我的电脑右击，属性，高级系统设置，高级，环境变量，系统变量里边的Path）；
 
     * 双击pdf2svg文件夹中的pdf2svg.exe进行安装；
 
@@ -63,6 +63,6 @@ Inkscape支持Mac, Linux和Windows平台，2020年的最新版本为0.92.5。对
 
 安装完成之后，在Inkscape的主菜单下的扩展中选择TexText或者WriteTex，然后输入LaTex表达式，点击确认：
 
-![Inkscape_code.JPG](https://i.loli.net/2020/04/13/48qtkxFZeUwhObz.jpg)
+![Inkscape_code.JPG](https://i.loli.net/2020/04/13/48qtkxFZeUwhObz.jpg){:height="50%" width="50%"}
 
-![Inkscape_result.JPG](https://i.loli.net/2020/04/13/pS5L3HleB7IzuwK.jpg)
+![Inkscape_result.JPG](https://i.loli.net/2020/04/13/pS5L3HleB7IzuwK.jpg){:height="50%" width="50%"}
