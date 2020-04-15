@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      LaTeX论文写作需要注意的几点
-subtitle:   取代商业的Viso
-date:       2020-04-13
+title:      LaTeX论文写作
+subtitle:   来自Haifeng的建议
+date:       2020-04-15
 author:     Haifeng
 header-img: img/sunflower.jpg
 catalog: true
