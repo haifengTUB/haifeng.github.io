@@ -32,6 +32,7 @@ tags:
 
 3. 在使用多层分式嵌套的时候，使用'\dfrac'代替'\frac'会使得公式边的好看不拥挤。但是得加上amsmath包：'\usepackage{amsmath}'。比如以下使用'\frac'的公式：
 
+<!--
 '''latex
 % defined own marcos
 \newcommand{\scli}[2]{#1_{\mathrm{\small #2}}}
