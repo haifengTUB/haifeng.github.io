@@ -4,7 +4,7 @@ title:      LaTeX论文写作
 subtitle:   来自Haifeng的建议
 date:       2020-04-15
 author:     Haifeng
-header-img: img/sunflower.jpg
+header-img: img/longmao.jfif
 catalog: true
 music-id: 25706282
 tags:
