@@ -30,7 +30,7 @@ tags:
 
 * **对盗版的打击力度很大**。德国是非常重视知识产权的国家，如果在网上非法下载电影都有可能被查，然后收到来自慕尼黑一家私人公司的罚单。罚单有的甚至可以达到1000欧以上（取决于你非法下载的电影的数量）。
 
-* **Linux系统的普及**。很多德国的科研机构使用的都是Linux系统，同时会有专门的运维师傅（以学校为例，一般一个小的系差不多配备一个运维工程师）负责安装和更新同事需要的开源软件和依赖库，然后会使用文件共享系统来充分利用Linux电脑核服务器的资源。所以很多时候你需要的开源环境已经在那里了，直接用就是了！有了bug也可以直接邮件运维师傅了，省下了不少精力，可以让你专注于科研项目。
+* **Linux系统的普及**。很多德国的科研机构使用的都是Linux系统，同时会有专门的运维师傅（以学校为例，一般一个小的系差不多配备一个运维工程师）负责安装和更新同事需要的开源软件和依赖库，然后会使用文件共享系统来充分利用Linux电脑和服务器的资源。所以很多时候你需要的开源环境已经在那里了，直接用就是了！有了bug也可以直接邮件运维师傅了，省下了不少精力，可以让你专注于科研项目。
 
 ## LaTeX论文写作注意点
 
@@ -44,7 +44,7 @@ tags:
 
 * 在论文投稿时，可以直接去论文的官方网站寻找相应的LaTeX写作模板（bst文件，cls文件等），然后将这些文件加载进本地工程文件夹，之后在开头和结尾分别利用`\documentclass{cls model}`和`\bibliographystyle{bst model}`语句来引用这些外部文件即可。以Journal of Geodesy为例，LaTeX模板可以在[这里](https://www.springer.com/journal/190/updates/17232314)找到，其实和其他的Spring出版的格式差不多，都是svjour3.cls和spbasic.bst等（作为对比Elsvier出版杂志很多时候用到的是elsarticle.cls和model5-names.bst）。另外利用LaTeX文件向[Editorial Manager (EM)](https://www.editorialmanager.com/joge/default.aspx)投稿的时候的一些说明和注意事项可以在[这里](https://static.springer.com/sgw/documents/1667815/application/pdf/190_Special%20Guidelines%20from%20EiC.pdf)找到，包括EM支持的LaTeX环境，投稿时LaTeX不同文件类型的正确顺利等，有一点奇怪的就是EM居然不支持自定义宏，这点有点让人费解。
 
-* 在使用多层分式嵌套的时候，使用`\dfrac`代替`\frac`会使得公式边的好看不拥挤。但是得加上amsmath包：`\usepackage{amsmath}`。比如以下使用`\frac`的公式：
+* 在使用多层分式嵌套的时候，使用`\dfrac`代替`\frac`会使得公式变的好看不拥挤。但是得加上amsmath包：`\usepackage{amsmath}`。比如以下使用`\frac`的公式：
   ```latex
   % defined own marcos
   \newcommand{\scli}[2]{#1_{\mathrm{\small #2}}}
@@ -123,10 +123,13 @@ tags:
   \end{linenomath*}
   ```
 
-* 未完待续。。。想到了继续写。
+* 未完待续。。。想到了继续写。其他的一些点参见参考中的第一个链接。
+
 
 >### 参考
 
 >- [LaTeX写作新手须知](https://weibo.com/ttarticle/p/show?id=2309403955741387052924)
+>- [最全 Markdown + Latex 编写技巧](https://blog.csdn.net/HaleyPKU/article/details/80341932)
 >- [Python下使用matplotlib库时,如何与LaTeX结合起来？](https://www.zhihu.com/question/55035983/answer/142312872)
+>- [Inkscape插入LaTeX公式到矢量图中](https://haifengtub.github.io/2020/04/13/inkscape/)
 >- [MikTex+TexStudio配置论文写作环境](https://zhuanlan.zhihu.com/p/42844087)
