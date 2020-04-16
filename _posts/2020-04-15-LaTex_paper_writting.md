@@ -28,16 +28,13 @@ tags:
 `\alpha`
 $\alpha$
 
-1. 正文中在引用图片和公式时均需要用“~”来产生空格，比如Fig.~'\setminus'ref{fig:PAM_processing}和Eq.~'\setminus'eqref{eq:L3x3}'。这样的好处是使得被引部分（比如Fig.和Eq.）和引用标记（比如5，（6））在换行时不会发生错开而分出两行的错误或者不美观情况。
+1. 正文中在引用图片和公式时均需要用“~”来产生空格，比如`Fig.~\ref{fig:PAM_processing}`和`Eq.~\eqref{eq:L3x3}`。这样的好处是使得被引部分（比如Fig.和Eq.）和引用标记（比如5，（6））在换行时不会发生错开而分出两行的错误或者不美观情况。
 
-2. 使用Mendeley等文献管理工具来管理论文和导出Bib TeX文件，因为直接从谷歌学术或者百度学术中导出来的Bib文件不会包含doi项，需要人工手动添加进去。另外，从这些学术引擎中导出来的Bib文件的标题没有加上{}，从而LaTeX编译之后显示出来的，除了标题的第一个字母大写，全是小写的（比如：'title = {Development of the Laser Altimeter (LIDAR) for Hayabusa2}会在参考文献列表中显示为Development of the laser altimeter (lidar) for hayabusa2'）。但是对于学术文献，我们希望的是保持原始的样式，而Mendeley则会在导出的Bib title项中自动加上{} （比如：'title = {{Development of the Laser Altimeter (LIDAR) for Hayabusa2}}编译之后会在参考文献列表中显示为Development of the Laser Altimeter (LIDAR) for Hayabusa2'）。
+2. 使用Mendeley等文献管理工具来管理论文和导出Bib TeX文件，因为直接从谷歌学术或者百度学术中导出来的Bib文件不会包含doi项，需要人工手动添加进去。另外，从这些学术引擎中导出来的Bib文件的标题没有加上{}，从而LaTeX编译之后显示出来的，除了标题的第一个字母大写，全是小写的（比如：`title = {Development of the Laser Altimeter (LIDAR) for Hayabusa2}会在参考文献列表中显示为Development of the laser altimeter (lidar) for hayabusa2`）。但是对于学术文献，我们希望的是保持原始的样式，而Mendeley则会在导出的Bib title项中自动加上{} （比如：`title = {{Development of the Laser Altimeter (LIDAR) for Hayabusa2}}编译之后会在参考文献列表中显示为Development of the Laser Altimeter (LIDAR) for Hayabusa2`）。
 
-3. 在使用多层分式嵌套的时候，使用'\dfrac'代替'\frac'会使得公式边的好看不拥挤。但是得加上amsmath包：'\usepackage{amsmath}'。比如以下使用'\frac'的公式：
+3. 在使用多层分式嵌套的时候，使用`\dfrac`代替`\frac`会使得公式边的好看不拥挤。但是得加上amsmath包：`\usepackage{amsmath}`。比如以下使用`\frac`的公式：
 
-
-
-<!--
-'''latex
+```latex
 % defined own marcos
 \newcommand{\scli}[2]{#1_{\mathrm{\small #2}}}
 \newcommand{\sclut}[3]{#1_{\mathrm{\small #2}}^{\mathrm{\small #3}}}
@@ -66,7 +63,11 @@ $\alpha$
 \label{eq:LightTimeSolution}
 \end{equation}
 \end{linenomath*}
-'''
+```
+
+<!--
+
+
 编译之后变成：
 $$
 % defined own marcos
