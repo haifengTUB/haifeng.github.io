@@ -20,7 +20,7 @@ tags:
 
 ## 国内外软件使用的不同
 
-有一点感触颇深的是国内外对科研工具使用的不同：国外个人基本上用到的全是开源的工具，而国内更习惯使用成熟的商业软件。比如在国内我们会使用ARCGIS来浏览处理一些遥感图像，而在国外采用的对应工具则为 [QGIS](https://qgis.org/en/site/)，[VICAR](https://github.com/nasa/VICAR/) 和 [GDAL](https://gdal.org/); 国内用 ARCGIS 来绘制地理图，国外用到的则是 [GMT](http://gmt.soest.hawaii.edu/)；国内倾向于使用 word，wps 来写文章写项目，而国外用到的则是 [Overleaf 线上编辑神器](https://www.overleaf.com/)或者 MikTeX+TexStudio 等线下编辑器；国内利用 EDARS LPS aATE 或者 [ENVI](https://www.harrisgeospatial.com/Software-Technology/ENVI) 等来处理立体像对以生成数字高程模型，而在国外对应的则是 [ISIS3 Jigsaw](http://isis.astrogeology.usgs.gov/) 和 [Ames Stereo Pipeline](https://ti.arc.nasa.gov/tech/asr/groups/intelligent-robotics/ngt/stereo/)。还有好多例子以后有机会再说, 有时间也跟大家分享下这些软件的使用经验（keng）。
+有一点感触颇深的是国内外对科研工具使用的不同：国外个人基本上用到的全是开源的工具，而国内更习惯使用成熟的商业软件。比如在国内我们会使用ARCGIS来浏览处理一些遥感图像，而在国外采用的对应工具则为 [QGIS](https://qgis.org/en/site/)，[VICAR](https://github.com/nasa/VICAR/) 和 [GDAL](https://gdal.org/); 国内用 ARCGIS 来绘制地理图，国外用到的则是 [GMT](http://gmt.soest.hawaii.edu/)；国内倾向于使用 word，wps 来写文章写项目，而国外用到的则是 [Overleaf 线上编辑神器](https://www.overleaf.com/)或者 MikTeX+TexStudio 等线下编辑器, 但是Overleaf已经集成了各种环境了，所以加载包之后直接就可以用了；国内利用 EDARS LPS aATE 或者 [ENVI](https://www.harrisgeospatial.com/Software-Technology/ENVI) 等来处理立体像对以生成数字高程模型，而在国外对应的则是 [ISIS3 Jigsaw](http://isis.astrogeology.usgs.gov/) 和 [Ames Stereo Pipeline](https://ti.arc.nasa.gov/tech/asr/groups/intelligent-robotics/ngt/stereo/)。还有好多例子以后有机会再说, 有时间也跟大家分享下这些软件的使用经验（keng）。
 
 ### 不同的主要原因
 
@@ -50,7 +50,7 @@ tags:
   \newcommand{\scli}[2]{#1_{\mathrm{\small #2}}}
   \newcommand{\sclut}[3]{#1_{\mathrm{\small #2}}^{\mathrm{\small #3}}}
 
-  % 利用 \frac{}{}
+  % utlizing \frac{}{}
   \begin{equation}
   \begin{aligned}
       t_2-t_1=\frac{r_{12}}{c}
@@ -97,7 +97,7 @@ tags:
   \newcommand{\scli}[2]{#1_{\mathrm{\small #2}}}
   \newcommand{\sclut}[3]{#1_{\mathrm{\small #2}}^{\mathrm{\small #3}}}
 
-  % 利用 \frac{}{}
+  % utlizing \frac{}{}
   \begin{linenomath*}
   \begin{equation}
   \begin{aligned}
