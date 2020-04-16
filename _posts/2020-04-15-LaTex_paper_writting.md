@@ -77,9 +77,9 @@ tags:
   ![formula0.JPG](https://i.loli.net/2020/04/16/jpJwWSAnd1CgZaO.jpg)
   而将`\frac{}{}`改为`\dfrac{}{}`之后，则变为：
   ![formula1.JPG](https://i.loli.net/2020/04/16/UzYAVtgawxsQmWj.jpg)
-  是不是漂亮了不少？另外有关于怎么利用LaTex打出漂亮的公式，这里有本非常赞的中文资料可以供大家来参考：`ChinaTeXMathFAQ_V11.pdf`, 大家可以直接去百度搜索就可以找得到。
+  是不是漂亮了不少？另外有关于怎么利用LaTex打出漂亮的公式，这里有本非常赞的中文资料可以供大家来参考：<u>ChinaTeXMathFAQ_V11.pdf</u>, 大家可以直接去百度搜索就可以找得到。
 
-* 根据文章不同的章节来制作对应的.tex文件，然后在main.tex（专门用来加载格式文件，一些需要的包，文章的作者和摘要等）使用`\input{章节.tex}`来进行加载。这样做的好处是使得文章的段落条理清晰，也方便了编辑时的查找和快速定位（对于Overleaf在生成的pdf中双击需要编辑的位置，也会自动转到对应的tex文件那里）。如果文章包含的图片文件太多，也可以建立一个pics文件夹，然后把图片全部放到里，引用时只需更改相应的路径名就行，比如：`\includegraphics[scale=0.35]{pics/pic_name.pdf}`。对于参考文献可以全部放到一个ref_name.bib文件里边，然后使用`\bibliographystyle{bst model}; \bibliography{ref_name}`来进行调用。
+* 根据文章不同的章节来制作对应的.tex文件，然后在main.tex（专门用来加载格式文件，一些需要的包，文章的作者和摘要等）使用`\input{chapter.tex}`来进行加载。这样做的好处是使得文章的段落条理清晰，也方便了编辑时的查找和快速定位（对于Overleaf在生成的pdf中双击需要编辑的位置，也会自动转到对应的tex文件那里）。如果文章包含的图片文件太多，也可以建立一个pics文件夹，然后把图片全部放到里，引用时只需更改相应的路径名就行，比如：`\includegraphics[scale=0.35]{pics/pic_name.pdf}`。对于参考文献可以全部放到一个ref_name.bib文件里边，然后使用`\bibliographystyle{bst model}; \bibliography{ref_name}`来进行调用。
 
 * 在文章投稿时，会要就加上相应的行列号，这时候就会用到lineno包（放在`\begin{document}`前边）：
   ```latex
