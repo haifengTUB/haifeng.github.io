@@ -45,46 +45,45 @@ tags:
 * 在论文投稿时，可以直接去论文的官方网站寻找相应的LaTeX写作模板（bst文件，cls文件等），然后将这些文件加载进本地工程文件夹，之后在开头和结尾分别利用`\documentclass{cls model}`和`\bibliographystyle{bst model}`语句来引用这些外部文件即可。以Journal of Geodesy为例，LaTeX模板可以在[这里](https://www.springer.com/journal/190/updates/17232314)找到，其实和其他的Spring出版的格式差不多，都是svjour3.cls和spbasic.bst等（作为对比Elsvier出版杂志很多时候用到的是elsarticle.cls和model5-names.bst）。另外利用LaTeX文件向[Editorial Manager (EM)](https://www.editorialmanager.com/joge/default.aspx)投稿的时候的一些说明和注意事项可以在[这里](https://static.springer.com/sgw/documents/1667815/application/pdf/190_Special%20Guidelines%20from%20EiC.pdf)找到，包括EM支持的LaTeX环境，投稿时LaTeX不同文件类型的正确顺利等，有一点奇怪的就是EM居然不支持自定义宏，这点有点让人费解。
 
 * 在使用多层分式嵌套的时候，使用`\dfrac`代替`\frac`会使得公式边的好看不拥挤。但是得加上amsmath包：`\usepackage{amsmath}`。比如以下使用`\frac`的公式：
+  ```latex
+  % defined own marcos
+  \newcommand{\scli}[2]{#1_{\mathrm{\small #2}}}
+  \newcommand{\sclut}[3]{#1_{\mathrm{\small #2}}^{\mathrm{\small #3}}}
 
-```latex
-% defined own marcos
-\newcommand{\scli}[2]{#1_{\mathrm{\small #2}}}
-\newcommand{\sclut}[3]{#1_{\mathrm{\small #2}}^{\mathrm{\small #3}}}
+  % using \frac{}{}
+  \begin{linenomath*}
+  \begin{equation}
+  \begin{aligned}
+      t_2-t_1=\frac{r_{12}}{c}
+      &+
+      \frac{(1+\gamma)\scli{\mu}{S}}{c^3}\ln
+      \begin{bmatrix}
+      \frac{\sclut{r}{1}{S}+\sclut{r}{2}{S}+\sclut{r}{12}{S}
+      +\frac{(1+\gamma)\scli{\mu} {S}}{c^2}}{\sclut{r}{1}{S}
+      +\sclut{r}{2}{S}+\sclut{r}{12}{S}
+      +\frac{(1+\gamma)\scli{\mu}{S}}{c^2}}\\
+      \end{bmatrix}\\
+      &+
+      \sum_{\mathrm{B}=1}^{n}\frac{(1+\gamma)\scli{\mu}{B}}{c^3}\ln
+      \begin{bmatrix}
+      \frac{\sclut{r}{1}{B}+\sclut{r}{2}{B}+\sclut{r}{12}{B}}
+      {\sclut{r}{1}{B}+\sclut{r}{2}{B}-\sclut{r}{12}{B}}\\
+      \end{bmatrix}
+       +\mathcal{O}(c^{-5})\,.
+  \end{aligned}
+  \label{eq:LightTimeSolution}
+  \end{equation}
+  \end{linenomath*}
+  ```
+  编译之后变成：
+  ![formula0.JPG](https://i.loli.net/2020/04/16/jpJwWSAnd1CgZaO.jpg)
+  而将`\frac{}{}`改为`\dfrac{}{}`之后，则变为：
+  ![formula1.JPG](https://i.loli.net/2020/04/16/UzYAVtgawxsQmWj.jpg)
+  是不是漂亮了不少？另外有关于怎么利用LaTex打出漂亮的公式，这里有本非常赞的中文资料可以供大家来参考：`ChinaTeXMathFAQ_V11.pdf`, 大家可以直接去百度搜索就可以找得到。
 
-% using \frac{}{}
-\begin{linenomath*}
-\begin{equation}
-\begin{aligned}
-    t_2-t_1=\frac{r_{12}}{c}
-    &+
-    \frac{(1+\gamma)\scli{\mu}{S}}{c^3}\ln
-    \begin{bmatrix}
-    \frac{\sclut{r}{1}{S}+\sclut{r}{2}{S}+\sclut{r}{12}{S}
-    +\frac{(1+\gamma)\scli{\mu} {S}}{c^2}}{\sclut{r}{1}{S}
-    +\sclut{r}{2}{S}+\sclut{r}{12}{S}
-    +\frac{(1+\gamma)\scli{\mu}{S}}{c^2}}\\
-    \end{bmatrix}\\
-    &+
-    \sum_{\mathrm{B}=1}^{n}\frac{(1+\gamma)\scli{\mu}{B}}{c^3}\ln
-    \begin{bmatrix}
-    \frac{\sclut{r}{1}{B}+\sclut{r}{2}{B}+\sclut{r}{12}{B}}
-    {\sclut{r}{1}{B}+\sclut{r}{2}{B}-\sclut{r}{12}{B}}\\
-    \end{bmatrix}
-     +\mathcal{O}(c^{-5})\,.
-\end{aligned}
-\label{eq:LightTimeSolution}
-\end{equation}
-\end{linenomath*}
-```
-编译之后变成：
-![formula0.JPG](https://i.loli.net/2020/04/16/jpJwWSAnd1CgZaO.jpg)
-而将\frac{}{}改为\dfrac{}{}之后，则变为：
-![formula1.JPG](https://i.loli.net/2020/04/16/UzYAVtgawxsQmWj.jpg)
-是不是漂亮了不少？另外有关于怎么利用LaTex打出漂亮的公式，这里有本非常赞的中文资料可以供大家来参考：'ChinaTeXMathFAQ_V11.pdf', 大家可以直接去百度搜索就可以找得到。
+* 根据文章不同的章节来制作对应的.tex文件，然后在main.tex（专门用来加载格式文件，一些需要的包，文章的作者和摘要等）使用`\input{章节.tex}`来进行加载。这样做的好处是使得文章的段落条理清晰，也方便了编辑时的查找和快速定位（对于Overleaf在生成的pdf中双击需要编辑的位置，也会自动转到对应的tex文件那里）。如果文章包含的图片文件太多，也可以建立一个pics文件夹，然后把图片全部放到里，引用时只需更改相应的路径名就行，比如：`\includegraphics[scale=0.35]{pics/pic_name.pdf}`。对于参考文献可以全部放到一个ref_name.bib文件里边，然后使用`\bibliographystyle{bst model}; \bibliography{ref_name}`来进行调用。
 
-6. 根据文章不同的章节来制作对应的.tex文件，然后在main.tex（专门用来加载格式文件，一些需要的包，文章的作者和摘要等）使用`\input{章节.tex}`来进行加载。这样做的好处是使得文章的段落条理清晰，也方便了编辑时的查找和快速定位（对于Overleaf在生成的pdf中双击需要编辑的位置，也会自动转到对应的tex文件那里）。如果文章包含的图片文件太多，也可以建立一个pics文件夹，然后把图片全部放到里，引用时只需更改相应的路径名就行，比如：`\includegraphics[scale=0.35]{pics/pic_name.pdf}`。对于参考文献可以全部放到一个ref_name.bib文件里边，然后使用`\bibliographystyle{bst model}; \bibliography{ref_name}`来进行调用。
-
-7. 未完待续。。。想到了继续写。
+* 未完待续。。。想到了继续写。
 
 >### 参考
 
