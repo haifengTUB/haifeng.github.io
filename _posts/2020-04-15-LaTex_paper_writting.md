@@ -74,7 +74,7 @@ tags:
   \end{equation}
   ```
   编译之后变成：
-  ![formula0.JPG](https://i.loli.net/2020/04/16/jpJwWSAnd1CgZaO.jpg)
+  ![formula0.JPG](https://i.loli.net/2020/04/16/jpJwWSAnd1CgZaO.jpg =200x)
   而将`\frac{}{}`改为`\dfrac{}{}`之后，则变为：
   ![formula1.JPG](https://i.loli.net/2020/04/16/UzYAVtgawxsQmWj.jpg)
   是不是漂亮了不少？另外有关于怎么利用LaTex打出漂亮的公式，这里有本非常赞的中文资料可以供大家来参考：<u>ChinaTeXMathFAQ_V11.pdf</u>, 大家可以直接去百度搜索就可以找得到。
