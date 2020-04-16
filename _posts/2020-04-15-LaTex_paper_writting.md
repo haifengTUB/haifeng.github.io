@@ -35,14 +35,16 @@ tags:
 ## LaTeX论文写作注意点
 
 扯的有点远了，我其实是想利用这篇文章来跟大家探讨下利用LaTeX论文写作时的一些注意事项😄:
-`\alpha`
-$$\alpha$$
 
-1. 正文中在引用图片和公式时均需要用“~”来产生空格，比如`Fig.~\ref{fig:PAM_processing}`和`Eq.~\eqref{eq:L3x3}`。这样的好处是使得被引部分（比如Fig.和Eq.）和引用标记（比如5，（6））在换行时不会发生错开而分出两行的错误或者不美观情况。
+* 正文中在引用图片和公式时均需要用“~”来产生空格，比如`Fig.~\ref{fig:PAM_processing}`和`Eq.~\eqref{eq:L3x3}`。这样的好处是使得被引部分（比如Fig.和Eq.）和引用标记（比如5，（6））在换行时不会发生错开而分出两行的错误或者不美观情况。
 
-2. 使用Mendeley等文献管理工具来管理论文和导出Bib TeX文件，因为直接从谷歌学术或者百度学术中导出来的Bib文件不会包含doi项，需要人工手动添加进去。另外，从这些学术引擎中导出来的Bib文件的标题没有加上{}，从而LaTeX编译之后显示出来的，除了标题的第一个字母大写，全是小写的（比如：`title = {Development of the Laser Altimeter (LIDAR) for Hayabusa2}` 会在参考文献列表中显示为 `Development of the laser altimeter (lidar) for hayabusa2`）。但是对于学术文献，我们希望的是保持原始的样式，而Mendeley则会在导出的Bib title项中自动加上{} （比如：`title = {{Development of the Laser Altimeter (LIDAR) for Hayabusa2}}` 编译之后会在参考文献列表中显示为 `Development of the Laser Altimeter (LIDAR) for Hayabusa2`）。
+* 使用Mendeley等文献管理工具来管理论文和导出Bib TeX文件，因为直接从谷歌学术或者百度学术中导出来的Bib文件不会包含doi项，需要人工手动添加进去。另外，从这些学术引擎中导出来的Bib文件的标题没有加上{}，从而LaTeX编译之后显示出来的，除了标题的第一个字母大写，全是小写的（比如：`title = {Development of the Laser Altimeter (LIDAR) for Hayabusa2}` 会在参考文献列表中显示为 `Development of the laser altimeter (lidar) for hayabusa2`）。但是对于学术文献，我们希望的是保持原始的样式，而Mendeley则会在导出的Bib title项中自动加上{} （比如：`title = {{Development of the Laser Altimeter (LIDAR) for Hayabusa2}}` 编译之后会在参考文献列表中显示为 `Development of the Laser Altimeter (LIDAR) for Hayabusa2`）。
 
-3. 在使用多层分式嵌套的时候，使用`\dfrac`代替`\frac`会使得公式边的好看不拥挤。但是得加上amsmath包：`\usepackage{amsmath}`。比如以下使用`\frac`的公式：
+* 学会利用Mathpix公式截取工具来进行LaTex公式的“公式截图-复制LaTeX代码-粘贴”，使用超级简单。具体可以参见[知乎上的介绍](https://www.zhihu.com/question/35931336/answer/641198933)。另外由于LaTeX对表格不是特别友好，这里推荐另一款专门生成表格的神奇：[Tables Generator](http://www.tablesgenerator.com/latex_tables)，使用也是非常简介高效。Tables Generator是一个在线制作LaTeX, HTML和Markdown格式的表格代码工具，支持在表格中编辑数据，修改字体/颜色填充，对齐方式等等。
+
+* 在论文投稿时，可以直接去论文的官方网站寻找相应的LaTeX写作模板（bst文件，cls文件等），然后将这些文件加载进本地工程文件夹，之后在开头和结尾分别利用`\documentclass{cls model}`和`\bibliographystyle{bst model}`语句来引用这些外部文件即可。以Journal of Geodesy为例，LaTeX模板可以在[这里](https://www.springer.com/journal/190/updates/17232314)找到，其实和其他的Spring出版的格式差不多，都是svjour3.cls和spbasic.bst等（作为对比Elsvier出版杂志很多时候用到的是elsarticle.cls和model5-names.bst）。另外利用LaTeX文件向[Editorial Manager (EM)](https://www.editorialmanager.com/joge/default.aspx)投稿的时候的一些说明和注意事项可以在[这里](https://static.springer.com/sgw/documents/1667815/application/pdf/190_Special%20Guidelines%20from%20EiC.pdf)找到，包括EM支持的LaTeX环境，投稿时LaTeX不同文件类型的正确顺利等，有一点奇怪的就是EM居然不支持自定义宏，这点有点让人费解。
+
+* 在使用多层分式嵌套的时候，使用`\dfrac`代替`\frac`会使得公式边的好看不拥挤。但是得加上amsmath包：`\usepackage{amsmath}`。比如以下使用`\frac`的公式：
 
 ```latex
 % defined own marcos
@@ -74,75 +76,11 @@ $$\alpha$$
 \end{equation}
 \end{linenomath*}
 ```
-
-<!--
-
-
 编译之后变成：
-$$
-% defined own marcos
-\newcommand{\scli}[2]{#1_{\mathrm{\small #2}}}
-\newcommand{\sclut}[3]{#1_{\mathrm{\small #2}}^{\mathrm{\small #3}}}
-
-% using \frac{}{}
-\begin{equation}
-\begin{aligned}
-    t_2-t_1=\frac{r_{12}}{c}
-    &+
-    \frac{(1+\gamma)\scli{\mu}{S}}{c^3}\ln
-    \begin{bmatrix}
-    \frac{\sclut{r}{1}{S}+\sclut{r}{2}{S}+\sclut{r}{12}{S}
-    +\frac{(1+\gamma)\scli{\mu} {S}}{c^2}}{\sclut{r}{1}{S}
-    +\sclut{r}{2}{S}+\sclut{r}{12}{S}
-    +\frac{(1+\gamma)\scli{\mu}{S}}{c^2}}\\
-    \end{bmatrix}\\
-    &+
-    \sum_{\mathrm{B}=1}^{n}\frac{(1+\gamma)\scli{\mu}{B}}{c^3}\ln
-    \begin{bmatrix}
-    \frac{\sclut{r}{1}{B}+\sclut{r}{2}{B}+\sclut{r}{12}{B}}
-    {\sclut{r}{1}{B}+\sclut{r}{2}{B}-\sclut{r}{12}{B}}\\
-    \end{bmatrix}
-     +\mathcal{O}(c^{-5})\,.
-\end{aligned}
-\label{eq:LightTimeSolution}
-\end{equation}
-$$
-
+![formula0.JPG](https://i.loli.net/2020/04/16/jpJwWSAnd1CgZaO.jpg)
 而将\frac{}{}改为\dfrac{}{}之后，则变为：
-$$
-% defined own marcos
-\newcommand{\scli}[2]{#1_{\mathrm{\small #2}}}
-\newcommand{\sclut}[3]{#1_{\mathrm{\small #2}}^{\mathrm{\small #3}}}
-
-% using \frac{}{}
-\begin{equation}
-\begin{aligned}
-    t_2-t_1=\frac{r_{12}}{c}
-    &+
-    \frac{(1+\gamma)\scli{\mu}{S}}{c^3}\ln
-    \begin{bmatrix}
-    \dfrac{\sclut{r}{1}{S}+\sclut{r}{2}{S}+\sclut{r}{12}{S}
-    +\dfrac{(1+\gamma)\scli{\mu} {S}}{c^2}}{\sclut{r}{1}{S}
-    +\sclut{r}{2}{S}+\sclut{r}{12}{S}
-    +\dfrac{(1+\gamma)\scli{\mu}{S}}{c^2}}\\
-    \end{bmatrix}\\
-    &+
-    \sum_{\mathrm{B}=1}^{n}\frac{(1+\gamma)\scli{\mu}{B}}{c^3}\ln
-    \begin{bmatrix}
-    \dfrac{\sclut{r}{1}{B}+\sclut{r}{2}{B}+\sclut{r}{12}{B}}
-    {\sclut{r}{1}{B}+\sclut{r}{2}{B}-\sclut{r}{12}{B}}\\
-    \end{bmatrix}
-     +\mathcal{O}(c^{-5})\,.
-\end{aligned}
-\label{eq:LightTimeSolution}
-\end{equation}
-$$
-
+![formula1.JPG](https://i.loli.net/2020/04/16/UzYAVtgawxsQmWj.jpg)
 是不是漂亮了不少？另外有关于怎么利用LaTex打出漂亮的公式，这里有本非常赞的中文资料可以供大家来参考：'ChinaTeXMathFAQ_V11.pdf', 大家可以直接去百度搜索就可以找得到。
-
- 4. 学会利用Mathpix公式截取工具来进行LaTex公式的“公式截图-复制LaTeX代码-粘贴”，使用超级简单。具体可以参见[知乎上的介绍](https://www.zhihu.com/question/35931336/answer/641198933)。另外由于LaTeX对表格不是特别友好，这里推荐另一款专门生成表格的神奇：[Tables Generator](http://www.tablesgenerator.com/latex_tables)，使用也是非常简介高效。Tables Generator是一个在线制作LaTeX, HTML和Markdown格式的表格代码工具，支持在表格中编辑数据，修改字体/颜色填充，对齐方式等等。
-
-5. 在论文投稿时，可以直接去论文的官方网站寻找相应的LaTeX写作模板（bst文件，cls文件等），然后将这些文件加载进本地工程文件夹，之后在开头和结尾分别利用'\documentclass{cls model}'和'\bibliographystyle{bst model}语句来引用这些外部文件即可。以Journal of Geodesy为例，LaTeX模板可以在[]这里](https://www.springer.com/journal/190/updates/17232314)找到，其实和其他的Spring出版的格式差不多，都是svjour3.cls和spbasic.bst等（作为对比Elsvier出版杂志很多时候用到的是elsarticle.cls和model5-names.bst）。另外利用LaTeX文件向[Editorial Manager (EM)](https://www.editorialmanager.com/joge/default.aspx)投稿的时候的一些说明和注意事项可以在[这里](https://static.springer.com/sgw/documents/1667815/application/pdf/190_Special%20Guidelines%20from%20EiC.pdf)找到，包括EM支持的LaTeX环境，投稿时LaTeX不同文件类型的正确顺利等，有一点奇怪的就是EM居然不支持自定义宏，这点有点让人费解。
 
 6. 未完待续。。。。
 
@@ -150,5 +88,3 @@ $$
 >### 参考
 
 >- [LaTeX写作新手须知](https://weibo.com/ttarticle/p/show?id=2309403955741387052924)
-
->--
