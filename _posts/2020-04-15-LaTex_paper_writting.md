@@ -91,7 +91,7 @@ tags:
   # 行号的字体颜色等
   \renewcommand{\linenumberfont}{\normalfont\bfseries\small\color{red}}
   ```
-  另外一个技巧是，在利用`\begin{equation}; \end{equation}`编写公式的时候需要用`\begin{linenomath*}; \end{linenomath*}`来将公式代码括起来，这样单独的公式也会被列入行号。<u>更重要的是</u>，如果没有这样做的话，生成的行号很可能是不连续的，错误的！那之前的那个公式做个列子：
+  另外一个技巧是，在利用`\begin{equation}; \end{equation}`编写公式的时候需要用`\begin{linenomath*}; \end{linenomath*}`来将公式代码括起来，这样单独的公式也会被列入行号。<u>更重要的是</u>，如果没有这样做的话，生成的行号很可能是不连续的，错误的！拿之前的那个公式做个列子：
   ```latex
   % defined own marcos
   \newcommand{\scli}[2]{#1_{\mathrm{\small #2}}}
