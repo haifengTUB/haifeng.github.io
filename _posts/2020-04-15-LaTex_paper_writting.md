@@ -16,7 +16,7 @@ tags:
 网易云音乐：《平凡之路》
 -->
 
-时间如梭，不知不觉在德国的学习时间已经过去了整整2年半，到了该考虑毕业论文的时候了':smiley:'。有一点感触颇深的是国内外对科研工具使用的不同：国外个人基本上用到的全是开源的工具，而国内更习惯使用成熟的商业软件。比如在国内我们会使用ARCGIS来浏览处理一些遥感图像，而在国外采用的对应工具则为 [QGIS](https://qgis.org/en/site/)，[VICAR](https://github.com/nasa/VICAR/) 和 [GDAL](https://gdal.org/); 国内用 ARCGIS 来绘制地理图，国外用到的则是 [GMT](http://gmt.soest.hawaii.edu/)；国内倾向于使用 word，wps 来写文章写项目，而国外用到的则是Overleaf线上编辑神奇或者MikTeX等线下编辑器；国内利用 EDARS LPS aATE 或者 [ENVI](https://www.harrisgeospatial.com/Software-Technology/ENVI) 等来处理立体像对以生成数字高程模型，而在国外对应的则是 [ISIS3 Jigsaw](http://isis.astrogeology.usgs.gov/) 和 [Ames Stereo Pipeline](https://ti.arc.nasa.gov/tech/asr/groups/intelligent-robotics/ngt/stereo/)。还有好多例子以后有机会再说。国外个人多利用开源软件的原因在我看来觉得主要是这么几条：
+时间如梭，不知不觉在德国的学习时间已经过去了整整2年半，到了该考虑毕业论文的时候了:smiley:。有一点感触颇深的是国内外对科研工具使用的不同：国外个人基本上用到的全是开源的工具，而国内更习惯使用成熟的商业软件。比如在国内我们会使用ARCGIS来浏览处理一些遥感图像，而在国外采用的对应工具则为 [QGIS](https://qgis.org/en/site/)，[VICAR](https://github.com/nasa/VICAR/) 和 [GDAL](https://gdal.org/); 国内用 ARCGIS 来绘制地理图，国外用到的则是 [GMT](http://gmt.soest.hawaii.edu/)；国内倾向于使用 word，wps 来写文章写项目，而国外用到的则是Overleaf线上编辑神奇或者MikTeX等线下编辑器；国内利用 EDARS LPS aATE 或者 [ENVI](https://www.harrisgeospatial.com/Software-Technology/ENVI) 等来处理立体像对以生成数字高程模型，而在国外对应的则是 [ISIS3 Jigsaw](http://isis.astrogeology.usgs.gov/) 和 [Ames Stereo Pipeline](https://ti.arc.nasa.gov/tech/asr/groups/intelligent-robotics/ngt/stereo/)。还有好多例子以后有机会再说。国外个人多利用开源软件的原因在我看来觉得主要是这么几条：
 
 * **没钱买**。现在很多商业软件是需要付费的，而且对于一些特有的功能的话收费是非常高的。这点可以从国外的书籍价格中略知一二（在德国的话平均都是30欧左右，大约300 RMB）。
 
@@ -24,7 +24,7 @@ tags:
 
 * **Linux系统的普及**。很多德国的科研机构使用的都是Linux系统，同时会有专门的运维师傅（以学校为例，一般一个小的系差不多配备一个运维工程师）负责安装和更新同事需要的开源软件和依赖库，然后会使用文件共享系统来充分利用Linux电脑核服务器的资源。所以很多时候你需要的开源环境已经在那里了，直接用就是了！有了bug也可以直接邮件运维师傅了，剩下了不少精力，可以让你专注于科研项目。
 
-扯的有点远了，我其实是想利用这篇文章来跟大家探讨下利用LaTeX论文写作时的一些注意事项':joy:'
+扯的有点远了，我其实是想利用这篇文章来跟大家探讨下利用LaTeX论文写作时的一些注意事项:joy:
 
 $\alpha$
 
