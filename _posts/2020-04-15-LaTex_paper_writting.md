@@ -16,7 +16,15 @@ tags:
 网易云音乐：《平凡之路》
 -->
 
-时间如梭，不知不觉在德国的学习时间已经过去了整整2年半，到了该考虑毕业论文的时候了😂。有一点感触颇深的是国内外对科研工具使用的不同：国外个人基本上用到的全是开源的工具，而国内更习惯使用成熟的商业软件。比如在国内我们会使用ARCGIS来浏览处理一些遥感图像，而在国外采用的对应工具则为 [QGIS](https://qgis.org/en/site/)，[VICAR](https://github.com/nasa/VICAR/) 和 [GDAL](https://gdal.org/); 国内用 ARCGIS 来绘制地理图，国外用到的则是 [GMT](http://gmt.soest.hawaii.edu/)；国内倾向于使用 word，wps 来写文章写项目，而国外用到的则是Overleaf线上编辑神奇或者MikTeX等线下编辑器；国内利用 EDARS LPS aATE 或者 [ENVI](https://www.harrisgeospatial.com/Software-Technology/ENVI) 等来处理立体像对以生成数字高程模型，而在国外对应的则是 [ISIS3 Jigsaw](http://isis.astrogeology.usgs.gov/) 和 [Ames Stereo Pipeline](https://ti.arc.nasa.gov/tech/asr/groups/intelligent-robotics/ngt/stereo/)。还有好多例子以后有机会再说。国外个人多利用开源软件的原因在我看来觉得主要是这么几条：
+时间如梭，不知不觉在德国的学习时间已经过去了整整2年半，到了该考虑毕业论文的时候了😂。
+
+## 国内外软件使用的不同
+
+有一点感触颇深的是国内外对科研工具使用的不同：国外个人基本上用到的全是开源的工具，而国内更习惯使用成熟的商业软件。比如在国内我们会使用ARCGIS来浏览处理一些遥感图像，而在国外采用的对应工具则为 [QGIS](https://qgis.org/en/site/)，[VICAR](https://github.com/nasa/VICAR/) 和 [GDAL](https://gdal.org/); 国内用 ARCGIS 来绘制地理图，国外用到的则是 [GMT](http://gmt.soest.hawaii.edu/)；国内倾向于使用 word，wps 来写文章写项目，而国外用到的则是 Overleaf 线上编辑神奇或者 MikTeX 等线下编辑器；国内利用 EDARS LPS aATE 或者 [ENVI](https://www.harrisgeospatial.com/Software-Technology/ENVI) 等来处理立体像对以生成数字高程模型，而在国外对应的则是 [ISIS3 Jigsaw](http://isis.astrogeology.usgs.gov/) 和 [Ames Stereo Pipeline](https://ti.arc.nasa.gov/tech/asr/groups/intelligent-robotics/ngt/stereo/)。还有好多例子以后有机会再说。
+
+### 不同的主要原因
+
+国外个人多利用开源软件的原因在我看来觉得主要是这么几条：
 
 * **没钱买**。现在很多商业软件是需要付费的，而且对于一些特有的功能的话收费是非常高的。这点可以从国外的书籍价格中略知一二（在德国的话平均都是30欧左右，大约300 RMB）。
 
@@ -24,13 +32,15 @@ tags:
 
 * **Linux系统的普及**。很多德国的科研机构使用的都是Linux系统，同时会有专门的运维师傅（以学校为例，一般一个小的系差不多配备一个运维工程师）负责安装和更新同事需要的开源软件和依赖库，然后会使用文件共享系统来充分利用Linux电脑核服务器的资源。所以很多时候你需要的开源环境已经在那里了，直接用就是了！有了bug也可以直接邮件运维师傅了，省下了不少精力，可以让你专注于科研项目。
 
+## LaTeX论文写作注意点
+
 扯的有点远了，我其实是想利用这篇文章来跟大家探讨下利用LaTeX论文写作时的一些注意事项😄:
 `\alpha`
-$\alpha$
+$$\alpha$$
 
 1. 正文中在引用图片和公式时均需要用“~”来产生空格，比如`Fig.~\ref{fig:PAM_processing}`和`Eq.~\eqref{eq:L3x3}`。这样的好处是使得被引部分（比如Fig.和Eq.）和引用标记（比如5，（6））在换行时不会发生错开而分出两行的错误或者不美观情况。
 
-2. 使用Mendeley等文献管理工具来管理论文和导出Bib TeX文件，因为直接从谷歌学术或者百度学术中导出来的Bib文件不会包含doi项，需要人工手动添加进去。另外，从这些学术引擎中导出来的Bib文件的标题没有加上{}，从而LaTeX编译之后显示出来的，除了标题的第一个字母大写，全是小写的（比如：`title = {Development of the Laser Altimeter (LIDAR) for Hayabusa2}会在参考文献列表中显示为Development of the laser altimeter (lidar) for hayabusa2`）。但是对于学术文献，我们希望的是保持原始的样式，而Mendeley则会在导出的Bib title项中自动加上{} （比如：`title = {{Development of the Laser Altimeter (LIDAR) for Hayabusa2}}编译之后会在参考文献列表中显示为Development of the Laser Altimeter (LIDAR) for Hayabusa2`）。
+2. 使用Mendeley等文献管理工具来管理论文和导出Bib TeX文件，因为直接从谷歌学术或者百度学术中导出来的Bib文件不会包含doi项，需要人工手动添加进去。另外，从这些学术引擎中导出来的Bib文件的标题没有加上{}，从而LaTeX编译之后显示出来的，除了标题的第一个字母大写，全是小写的（比如：`title = {Development of the Laser Altimeter (LIDAR) for Hayabusa2}` 会在参考文献列表中显示为 `Development of the laser altimeter (lidar) for hayabusa2`）。但是对于学术文献，我们希望的是保持原始的样式，而Mendeley则会在导出的Bib title项中自动加上{} （比如：`title = {{Development of the Laser Altimeter (LIDAR) for Hayabusa2}}` 编译之后会在参考文献列表中显示为 `Development of the Laser Altimeter (LIDAR) for Hayabusa2`）。
 
 3. 在使用多层分式嵌套的时候，使用`\dfrac`代替`\frac`会使得公式边的好看不拥挤。但是得加上amsmath包：`\usepackage{amsmath}`。比如以下使用`\frac`的公式：
 
