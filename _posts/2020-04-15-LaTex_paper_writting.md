@@ -126,10 +126,11 @@ tags:
 * 未完待续。。。想到了继续写。其他的一些点参见参考中的第一个链接。
 
 
->### 参考
+>### 阅读资源
 
 >- [LaTeX写作新手须知](https://weibo.com/ttarticle/p/show?id=2309403955741387052924)
 >- [最全 Markdown + Latex 编写技巧](https://blog.csdn.net/HaleyPKU/article/details/80341932)
 >- [Python下使用matplotlib库时,如何与LaTeX结合起来？](https://www.zhihu.com/question/55035983/answer/142312872)
 >- [Inkscape插入LaTeX公式到矢量图中](https://haifengtub.github.io/2020/04/13/inkscape/)
+>- [UESTC LaTeX毕设论文模板 Overleaf无痛上手指南](https://zhuanlan.zhihu.com/p/126712982)
 >- [MikTex+TexStudio配置论文写作环境](https://zhuanlan.zhihu.com/p/42844087)
