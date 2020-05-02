@@ -98,8 +98,8 @@ service-worker: true
 # Friends
 friends: [
     {
-        title: "同济大学",
-        href: "https://www.tongji.edu.cn/"
+        title: "SPACE.COM",
+        href: "https://www.space.com/"
     },{
         title: "柏林工业大学",
         href: "https://www.tu-berlin.de/"
